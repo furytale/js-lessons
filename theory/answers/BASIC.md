@@ -45,42 +45,42 @@
 13. ##### Что такое зарезервированная переменная ```arguments``` внутри функции?
      * Answer:Это псевдомассив. С помощью   arguments можно получить все аргументы функции.(Сейчас есть остаточные параметры)
 14. Какие есть способы обьявления массива данных, в чем их отличие? Напиши пример.
-     * Answer:  Способ № 1 (объявление)
-                1.1. С помощью литерала массива.
+     * Answer:  
+         *  Способ № 1 (объявление)
+            * 1.1. С помощью литерала массива.
                      const array = [0, false, ''];
-                1.2. Через конструктор Array()
+            *  1.2. Через конструктор Array()
                      const array = new Array(1,2);
                      const array = new Array(7); - В данном примере длина массива (array.length) будет 7 элементов, значение элементов - undefined.
+            * Формальные способы закончены, но … есть способы создания массива из другого массива
+     *  ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Что означает данная запись: ```const array = new Array(1,2);```       
 
-Формальные способы закончены, но … есть способы создания массива из другого массива
 
 
 15. Обьяснить - в чем разниза между ```forEach()``` и ```map()``` ?  Напиши пример работы оператора.
      * Answer:  
                 
                 Разница заключается в том, что они возвращают. После выполнения:
-
                 arr.map()
-
                 возвращает массив элементов, полученный в результате обработанной функции; в то время как:
-
+                
                 arr.forEach()
-
                 возвращает undefined.
               
-   var numbers = [2,3,5,7];
-
-   var forEachNum = numbers.forEach(function(number){
-      return number
-   })
-   console.log(forEachNum)
-   //output undefined
-
-   var mapNum = numbers.map(function(number){
-      return number
-   })
-   console.log(mapNum)
-   //output [2,3,5,7]
+              
+                var numbers = [2,3,5,7];
+                
+                var forEachNum = numbers.forEach(function(number){
+                  return number
+                })
+                console.log(forEachNum)
+                //output undefined
+                
+                var mapNum = numbers.map(function(number){
+                  return number
+                })
+                console.log(mapNum)
+                //output [2,3,5,7]
 
 
 
@@ -101,51 +101,55 @@
                       unshift/push - добавить элемент в начало/конец массива
                       shift/pop - удалить и вернуть первый/последний элемент массива
                       
-let arr = ["lol", "pol", "kol", "mol"];
-arr.unshift(89);
-console.log(arr); // [89 ,"lol" ,"pol" ,"kol" ,"mol"]
-
-let arr1 = ["lol", "pol", "kol", "mol"];
-arr1.push(0)
-console.log(arr1); // ["lol", "pol", "kol", "mol", 0]
-
-let arr2 = ["lol", "pol", "kol", "mol"];
-arr2.shift();
-console.log(arr2); // ["pol", "kol", "mol"]
-
-let arr3 = ["lol", "pol", "kol", "mol"];
-arr3.pop()
-console.log(arr3); // ["lol", "pol", "kol"]
+            let arr = ["lol", "pol", "kol", "mol"];
+            arr.unshift(89);
+            console.log(arr); // [89 ,"lol" ,"pol" ,"kol" ,"mol"]
+            
+            let arr1 = ["lol", "pol", "kol", "mol"];
+            arr1.push(0)
+            console.log(arr1); // ["lol", "pol", "kol", "mol", 0]
+            
+            let arr2 = ["lol", "pol", "kol", "mol"];
+            arr2.shift();
+            console.log(arr2); // ["pol", "kol", "mol"]
+            
+            let arr3 = ["lol", "pol", "kol", "mol"];
+            arr3.pop()
+            console.log(arr3); // ["lol", "pol", "kol"]
 
 
 18. Обьяснить - в чем разниза между ```findIndex()```, ```find()``` и ```indexOf()``` ? Напиши пример работы оператора.
-     * Answer: 
-              Метод find ищет один (первый попавшийся) элемент, на котором функция-колбэк вернёт true.
-              Метод find(),  возвращает значение найденного в массиве элемента вместо его индекса.
- let users = [
-  {id: 1, name: "Толик"},
-  {id: 2, name: "Саша"},
-  {id: 3, name: "Оля"}
-];
+     *  Answer
+            Метод find ищет один (первый попавшийся) элемент, на котором функция-колбэк вернёт true.
+            Метод find(),  возвращает значение найденного в массиве элемента вместо его индекса.
+            
+                let users = [
+                        {id: 1, name: "Толик"},
+                        {id: 2, name: "Саша"},
+                        {id: 3, name: "Оля"}
+                ];
+            
 
-let user = users.find(item => item.id == 3);
+                let user = users.find(item => item.id == 3);
 
-console.log(user.name); // Оля
+                console.log(user.name); // Оля
 
-              Метод arr.findIndex – возвращает индекс, на котором был найден элемент, а не сам элемент, и -1, если ничего не найдено.
+                Метод arr.findIndex – возвращает индекс, на котором был найден элемент, а не сам элемент, и -1, если ничего не найдено.
+                
+                Метод indexOf() сравнивает искомый элемент с элементами в массиве, используя строгое сравнение (тот же метод используется оператором ===, тройное равно).
+                var ages = [3, 10, 18, 20];
+                console.log(ages.indexOf(10)); // 1
 
-              Метод indexOf() сравнивает искомый элемент с элементами в массиве, используя строгое сравнение (тот же метод используется оператором ===, тройное равно).
-              var ages = [3, 10, 18, 20];
-              console.log(ages.indexOf(10)); // 1
-
-Синтаксис этого метода схож с find, но filter возвращает массив из всех подходящих элементов 
+                Синтаксис этого метода схож с find, но filter возвращает массив из всех подходящих элементов 
 19. Как преобразовать строку ```a,b,c,d,e,f,g``` в массив?
      * Answer:  
+     
                 let str = "a,b,c,d,e,f,g";
                 console.log(str.split()); // [a,b,c,d,e,f,g]
 
 
 20. Как преобразовать массив ```[1,2,3,4,5,6,7]``` в строку?
      * Answer:  
+     
                 let arr = [1,2,3,4,5,6,7];
                 console.log(arr.join()); // "1,2,3,4,5,6,
