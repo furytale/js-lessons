@@ -105,21 +105,21 @@
 
             // Start your code here
 
-function transformArrayToOddEvenConditions(values){
-  var ss = [];
-  for (var i = 0; i < values.length; i++) {
-    if(values[i] % 2 === 0){
-      ss.push(true);
-    } else {
-      ss.push(false);
-    }
-  }
-  return ss;
-}
+                 function transformArrayToOddEvenConditions(values){
+                     var ss = [];
+                     for (var i = 0; i < values.length; i++) {
+                          if(values[i] % 2 === 0){
+                             ss.push(true);
+                           } else {
+                              ss.push(false);
+                          }
+                      }
+                        return ss;
+                      }
 
-var arr22 = [1,10,11,12,7,6,8]; 
-var ppp = transformArrayToOddEvenConditions(arr22);
-console.log(ppp);
+                     var arr22 = [1,10,11,12,7,6,8]; 
+                     var ppp = transformArrayToOddEvenConditions(arr22);
+                     console.log(ppp);
 
 
             
@@ -136,23 +136,23 @@ console.log(ppp);
    * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Solution        
 
             // Start your code here
-function getMaxLengthArray(){
-var num = 0;
-for (var i = 0; i < arguments.length; i++) {
-  if(arguments[i].length > num){
-    num = arguments[i].length;
-  } else if (num in arr) {
-    return arr;
+               function getMaxLengthArray(){
+               var num = 0;
+                  for (var i = 0; i < arguments.length; i++) {
+                     if(arguments[i].length > num){
+                         num = arguments[i].length;
+                     } else if (num in arr) {
+                      return arr;
 
-  }
-  }
-  return num;
-}
-var arr01 = [1,2,3,4,5];
-var arr02 = [1,2,3,4,5,6,7];
-var arr03 = [1,2,3,4,5,6,7,8,9];
-var result444 = getMaxLengthArray(arr01, arr02, arr03);
-console.log(result444);
+                     }
+                    }
+              return num;
+              }
+             var arr01 = [1,2,3,4,5];
+             var arr02 = [1,2,3,4,5,6,7];
+             var arr03 = [1,2,3,4,5,6,7,8,9];
+             var result444 = getMaxLengthArray(arr01, arr02, arr03);
+             console.log(result444);
             
             // End of the code
 
@@ -166,17 +166,18 @@ console.log(result444);
 
             // Start your code her
 
-function arrayMaxValue(values) {
-  var y = 0;
-  for(var i = 0; i < values.length; i++);
-if(values[i] < y){
-      y = values[i];
-    }
-  return y;
-}
-var arrMax = [2, 4, 1, 9, 3, 5, 8];
-var resultMax = arrayMaxValue(arrMax);
-console.log(resultMax);
+             function arrayMaxValue(values) {
+             var y = 0;
+             for(var i = 0; i < values.length; i++);
+               if(values[i] < y){
+                  y = values[i];
+               }
+             return y;
+             }
+
+            var arrMax = [2, 4, 1, 9, 3, 5, 8];
+            var resultMax = arrayMaxValue(arrMax);
+            console.log(resultMax);
 
             
             // End of the code
