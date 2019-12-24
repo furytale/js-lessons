@@ -199,10 +199,11 @@
              for(var i = 0; i < words.length; i++){
               var num = parseInt(words[i]);
                if(!isNaN(num)){
-                   return num;
+                   return false;
                       }
 
               }
+               return true;
            }
            var strq = 'abcd8efgg';
            var resultS = hasNoStrSymbols(strq);
