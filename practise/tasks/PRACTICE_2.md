@@ -193,7 +193,20 @@
    * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Solution        
 
           // Start your code here
-          
+          function hasNoStrSymbols(sentence, limit){
+
+            var words = sentence.split('');
+             for(var i = 0; i < words.length; i++){
+              var num = parseInt(words[i]);
+               if(!isNaN(num)){
+                   return num;
+                      }
+
+              }
+           }
+           var strq = 'abcd8efgg';
+           var resultS = hasNoStrSymbols(strq);
+           console.log(resultS);
           
           // End of the code
 9. ##### Написать функцию, которая принимает 2 массива и возврашает значения, которые присутствуют в обоих массивах
