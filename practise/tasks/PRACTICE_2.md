@@ -220,10 +220,29 @@
    * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Solution     
       
             // Start your code here
-            
+
+            function getCommonValues(a, b){
+              var result = [];
+              while(a.length > 0 && b.length > 0){
+                 if(a[0] < b[0]){
+                        a.shift();
+                 } else if(a[0] > b[0]){
+                   b.shift();
+                 } else{
+                     result.push(a.shift());
+                     b.shift();
+                 }
+              }
+               return result;
+            }
+
+            var arr11 = [1,2,3,4,5,6,7];
+            var arr22 = [1,2,7,55,66,77,88,99];
+            var resultNum = getCommonValues(arr11, arr22);
+            console.log(resultNum);
             
             // End of the code
-9. ##### Напиши функцию, которая принимает 3 массива и возврашает значения, которые не повторяются в массивах
+10. ##### Напиши функцию, которая принимает 3 массива и возврашает значения, которые не повторяются в массивах
     * ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Code
    
             var arr1 = [1,2,3,4,5,6,7];
