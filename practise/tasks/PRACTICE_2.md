@@ -83,9 +83,9 @@
             // Start your code here
             function filterArrayRangeValues(values){
               var e = [];
-             for(var i = 0; i > values.length; i++){
+             for(var i = 0; i < values.length; i++){
                   if(values[i] >= 0 && values[i]<= 10){
-                       e.filter(values[i]);  }
+                       e.push(values[i]);  }
                       }
               return e;
             }
@@ -166,18 +166,18 @@
 
             // Start your code her
 
-             function arrayMaxValue(values) {
-             var y = 0;
-             for(var i = 0; i < values.length; i++);
-               if(values[i] < y){
-                  y = values[i];
-               }
-             return y;
-             }
+           function arrayMinValue(values) {
+              var y = 0;
+              for(var i = 0; i < values.length; i++){
+                 if(values[i] > y){
+                    y = values[i];
+                   }
+              return y;
+              }
 
-            var arrMax = [2, 4, 1, 9, 3, 5, 8];
-            var resultMax = arrayMaxValue(arrMax);
-            console.log(resultMax);
+              var arrMin = [2, 4, 1, 9, 3, 5, 8];
+              var resultMin = arrayMinValue(arrMin);
+              console.log(resultMin);
 
             
             // End of the code
