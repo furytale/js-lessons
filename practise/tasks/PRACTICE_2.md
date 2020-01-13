@@ -82,7 +82,7 @@
 
             // Start your code here
             function filterArrayRangeValues(values){
-              var e = [];
+             var e = [];
              for(var i = 0; i < values.length; i++){
                   if(values[i] >= 0 && values[i]<= 10){
                        e.push(values[i]);  }
