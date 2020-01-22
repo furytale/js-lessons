@@ -137,14 +137,14 @@
 
             // Start your code here
                function getMaxLengthArray(){
-               var num = 0;
+               var num = arguments[0];
+               var newArr = [];
                   for (var i = 0; i < arguments.length; i++) {
-                     if(arguments[i].length > num){
-                         num = arguments[i].length;
-                     } else if (num in arr) {
-                      return arr;
+                     if(arguments[i] > num){
+                         num = arguments[i];
+                         newArr = num;
 
-                     }
+                     } 
                     }
               return num;
               }
@@ -167,14 +167,14 @@
             // Start your code her
 
            function arrayMinValue(values) {
-              var y = 0;
+              var y = values[0];
               for(var i = 0; i < values.length; i++){
-                 if(values[i] > y){
+                 if(values[i] < y){
                     y = values[i];
                    }
-              return y;
               }
-
+              return y;
+            }
               var arrMin = [2, 4, 1, 9, 3, 5, 8];
               var resultMin = arrayMinValue(arrMin);
               console.log(resultMin);
@@ -221,23 +221,22 @@
       
             // Start your code here
 
-            function getCommonValues(a, b){
-              var result = [];
-              while(a.length > 0 && b.length > 0){
-                 if(a[0] < b[0]){
-                        a.shift();
-                 } else if(a[0] > b[0]){
-                   b.shift();
-                 } else{
-                     result.push(a.shift());
-                     b.shift();
-                 }
-              }
-               return result;
+            function getCommonValues(a, b) {
+            var d = {};
+            var results = [];
+            for (var i = 0; i < b.length; i++) {
+                  d[b[i]] = true;
+                }
+            for (var j = 0; j < a.length; j++) {
+                if (d[a[j]]){
+                results.push(a[j]);
+                     }
+               }
+                  return results;
             }
 
             var arr11 = [1,2,3,4,5,6,7];
-            var arr22 = [1,2,7,55,66,77,88,99];
+            var arr22 = [1,2,7,55,66,77,88,99,];
             var resultNum = getCommonValues(arr11, arr22);
             console.log(resultNum);
             
