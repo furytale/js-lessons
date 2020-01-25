@@ -252,23 +252,35 @@
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Solution        
 
             // Start your code here
-            function getUniqueValues(a, b, c){
-                var result = [];
-                var tmp = {};
-                for(var i = 0; i < a.length && i < b.length && i < c.length; i++){
-                       if(a[i] === b[i] && b[i] === c[i] in tmp) continue;
-                         result.push(a[i], b[i], c[i]);
-                         tmp[a[i] && b[i] && c[i]] = 1;
-                         }
-                return result;
-                }
+            function getUniqueValues(a, b, c) {
+             var result = [];
 
-                var arr111 = [1,2,3,4,5,6,7];
-                var arr222 = [1,2,3,4,5,6,7,8];
-                var arr333 = [1,2,3,4,5,6,7,9,10];
-                const uniqueAges = getUniqueValues(arr111, arr222, arr333);
-                console.log(uniqueAges);
-            
+            for(var i = 0; i < a.length; i++){
+            if(b.indexOf(a[i] === -1)){
+              result.push(a[i]);
+                }
+            }
+              for(i = 0; i < b.length; i++){
+              if(a.indexOf(b[i] === -1)){
+              result.push(b[i]);
+             }
+          }
+         for(i = 0; i < c.length; i++){
+          if(a.indexOf(c[i] === -1)){
+            result.push(c[i]);
+           }
+           }
+            var uniqueName = result.filter(function(value){
+              return value > 7;
+              })
+            return uniqueName;
+
+         } 
+            var arr111 = [1,2,3,4,5,6,7];
+            var arr222 = [1,2,3,4,5,6,7,8];
+            var arr333 = [1,2,3,4,5,6,7,9,10];
+            const uniqueAges = getUniqueValues( arr111, arr222, arr333);
+            console.log(uniqueAges);
             // End of the code
 11. ##### Написать функцию, которая принимает строку, и символ для поиска в строке. Функция должна выводить количество повторений символа в строке.
     * ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) Code
