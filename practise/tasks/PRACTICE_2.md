@@ -292,6 +292,19 @@
     * ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Solution        
 
             // Start your code here
-            
+            function countSymbolInStr(){
+            var arr = str.split('');
+              var y = 0;
+              for(var i = 0; i < arr.length; i++){
+             if ( arr[i] === symb){
+              y.push(arr[i]);
+          }
+        }
+        return y;
+        }
+
+        var str = 'hello world';
+        var symb = 'l';
+        console.log(countSymbolInStr());
             
             // End of the code
